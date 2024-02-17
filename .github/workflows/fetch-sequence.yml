@@ -11,12 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-            token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
-      
-      - name: Setup Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '14'
+          token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
       
       - name: Fetch sequence from random.org
         env:
@@ -25,12 +20,4 @@ jobs:
           echo 'Fetching daily sequence...'
           curl -H "Content-Type: application/json" \
                -d '{"jsonrpc":"2.0","method":"generateIntegerSequences","params":{"apiKey":"'"${{ secrets.RANDOM_ORG_API_KEY }}"'","n":1,"length":28,"min":1,"max":28,"replacement":false,"base":10},"id":1}' \
-               https://api.random.org/json-rpc/2/invoke > sequence.json
-          
-      - name: Commit and push if changed
-        run: |
-          git config --global user.email "action@github.com"
-          git config --global user.name "GitHub Action"
-          git add sequence.json
-          git commit -m "Update daily sequence" -a || echo "No changes to commit"
-          git push
+               https://api.random.org/json-rpc/2/invoke > sequence.json && git config --global user.email "action@github.com" && git config --global user.name "GitHub Action" && git add sequence.json && git commit -m "Update daily sequence" -a || echo "No changes to commit" && git push
