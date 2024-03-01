@@ -29,8 +29,7 @@ const students = [
 
 function updateCurrentTime() {
     const now = new Date();
-    const formattedDate = now.toLocaleString('ru-RU', { hour12: false });
-    document.getElementById('currentTime').textContent = formattedDate;
+    document.getElementById('currentTime').textContent = now.toLocaleString('ru-RU', {hour12: false});
 }
 
 
@@ -39,16 +38,23 @@ function loadStudents() {
         .then(response => response.json())
         .then(data => {
             const sequence = data.result.random.data[0];
-            const queueElement = document.getElementById('studentsQueue');
+            document.getElementById('studentsQueue');
             sequence.forEach((number, index) => {
                 const student = students.find(s => s.id === number);
                 if (student) {
-                    const listItem = document.createElement('li');
-                    listItem.classList.add('list-group-item');
-                    listItem.textContent = `${index + 1}. ${student.name}`;
-                    queueElement.appendChild(listItem);
+                    const row = document.createElement('tr');
+                    const cellNumber = document.createElement('td');
+                    cellNumber.textContent = index + 1;
+                    const cellName = document.createElement('td');
+                    cellName.textContent = student.name;
+
+                    row.appendChild(cellNumber);
+                    row.appendChild(cellName);
+                    document.getElementById('studentsQueue').querySelector('tbody').appendChild(row);
                 }
             });
+
+
         })
         .catch(error => {
             console.error('Ошибка при загрузке последовательности: ', error);

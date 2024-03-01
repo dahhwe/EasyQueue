@@ -6,30 +6,28 @@
     <title>Очередь Студентов</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            padding-top: 20px;
-            font-family: 'Roboto', sans-serif;
-        }
-
-        .current-time {
-            font-size: 24px;
-            font-weight: 700;
-            margin-bottom: 20px;
-        }
-
-        .list-group-item {
-            text-align: left;
-            background-color: #f8f9fa;
-            border: 1px solid #ddd;
-        }
-    </style>
+    <link href="styles.css" rel="stylesheet">
 </head>
 <body>
 <div class="container">
-    <div id="currentTime" class="current-time text-center"></div>
-    <ul class="list-group" id="studentsQueue"></ul>
+    <div class="time-and-update text-center">
+        <div id="currentTime" class="current-time"></div>
+        <div class="update-time-label">Очередь обновляется в 21:00 ежедневно</div>
+    </div>
+    <div class="table-container">
+        <table class="table table-styled" id="studentsQueue">
+            <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">ФИО</th>
+            </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
 </div>
+
 <script src="script.js"></script>
 </body>
 </html>

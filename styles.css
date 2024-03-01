@@ -1,0 +1,72 @@
+body {
+    padding-top: 20px;
+    font-family: 'Roboto', sans-serif;
+    background-color: rgba(231, 226, 191, 0.25);
+}
+
+.current-time {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.time-and-update {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.update-time-label {
+    font-size: 18px;
+    color: #333;
+}
+
+.table-container {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.table-styled {
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 0;
+}
+
+.table-styled th, .table-styled td {
+    padding: 8px 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.table-styled th {
+    background-color: #f9f9f9;
+    border-bottom: 2px solid #ddd;
+    border-top: none;
+}
+
+.table-styled td::after {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.table-styled tr:last-child th,
+.table-styled tr:last-child td {
+    border-bottom: none;
+}
+
+.gold {
+    background-color: rgba(255, 215, 0, 0.2);
+}
+
+.silver {
+    background-color: rgba(192, 192, 192, 0.2);
+}
+
+.bronze {
+    background-color: rgba(205, 127, 50, 0.2);
+}
