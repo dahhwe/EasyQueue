@@ -1,1 +1,1 @@
-{"jsonrpc":"2.0","result":{"random":{"data":[[15,10,2,12,20,5,4,3,7,25,23,11,18,21,1,16,22,6,19,17,14,9,8,24,26,13]],"completionTime":"2024-03-14 14:14:09Z"},"bitsUsed":122,"bitsLeft":249878,"requestsLeft":999,"advisoryDelay":1160},"id":1}
+{"jsonrpc":"2.0","result":{"random":{"data":[[13,6,16,15,11,1,12,22,24,25,21,18,9,4,14,3,20,2,5,8,10,7,23,17,26,19]],"completionTime":"2024-03-15 14:14:05Z"},"bitsUsed":122,"bitsLeft":249878,"requestsLeft":999,"advisoryDelay":2460},"id":1}
