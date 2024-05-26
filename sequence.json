@@ -1,1 +1,1 @@
-error code: 521
+{"jsonrpc":"2.0","result":{"random":{"data":[[17,2,7,10,8,1,14,5,16,4,26,22,6,12,18,23,19,9,21,15,25,20,13,3,11,24]],"completionTime":"2024-05-26 14:13:25Z"},"bitsUsed":122,"bitsLeft":249878,"requestsLeft":999,"advisoryDelay":1020},"id":1}
